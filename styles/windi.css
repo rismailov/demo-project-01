@@ -1,0 +1,38 @@
+/* text element colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-l-title dark:text-d-title;
+}
+
+p {
+    @apply text-l-text dark:text-d-text;
+}
+
+/* headings */
+h1,
+h2,
+h3 {
+    @apply font-bold;
+}
+
+h4,
+h5,
+h6 {
+    @apply font-medium;
+}
+
+h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl leading-tight;
+}
+
+h2 {
+    @apply text-2xl md:text-3xl;
+}
+
+h3 {
+    @apply text-xl;
+}

@@ -1,0 +1,123 @@
+// Header Link ----------------------------------------
+.header-link {
+    position: relative;
+    transition: color 0.2s ease-in;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 1px;
+        bottom: -3px;
+        width: 100%;
+        max-width: 0;
+        height: 2.5px;
+        background: var(--primary);
+
+        transition: max-width 0.2s ease-in;
+    }
+
+    &.active {
+        font-weight: 500;
+
+        &::after {
+            max-width: 20px;
+        }
+    }
+
+    &:hover {
+        &::after {
+            max-width: 100%;
+        }
+    }
+}
+// ----------------------------------------------
+
+// ------------------- Header burger --------------------
+#headerBurgerNav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    // transition: opacity 100ms ease-in;
+    display: flex;
+    background: white;
+    padding: 2rem 0;
+    pointer-events: none;
+    opacity: 0;
+
+    &.active {
+        top: 75px;
+        opacity: 1;
+        pointer-events: all;
+        transition: position 500ms ease-out, opacity 100ms ease-in;
+    }
+}
+// ------------------------------------------------------
+
+// --------------------- Services Grid ---------------------
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+    justify-items: center;
+
+    &-title {
+        padding-right: 1.75rem;
+        grid-column: 1 / 3;
+    }
+
+    &-item {
+        max-width: 20rem;
+    }
+
+    @media (max-width: 1024px) {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-item {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+        justify-items: start;
+
+        &-item {
+            max-width: 100%;
+        }
+
+        &-title {
+            padding-right: 1.75rem;
+            grid-column: 1 / 2;
+        }
+    }
+}
+// --------------------- ------------- ---------------------
+
+// --------------- Carousel Styles on Index Page --------------------------
+.carousel-root {
+    .thumbs-wrapper {
+        display: none;
+    }
+
+    // slider controls
+    .carousel-slider {
+        [data-dir='prev'],
+        [data-dir='next'] {
+            position: absolute;
+            z-index: 10;
+            bottom: 10px;
+        }
+
+        [data-dir='prev'] {
+            right: 50px;
+        }
+
+        [data-dir='next'] {
+            right: 10px;
+        }
+    }
+}
+// ------------------------------------------------------------------------

@@ -1,0 +1,41 @@
+:root {
+    --primary: #3b71fe;
+    --primary-hover: #5483fe;
+    --primary-active: #225ffe;
+    --light-text: rgba(14, 14, 44, 0.55);
+    --light-title: #0e0e2c;
+    --light-bg: #ffffff;
+    --dark-text: #a0a4ab;
+    --dark-title: #ffffff;
+    --dark-bg: #262a31;
+}
+
+@import './elements';
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
