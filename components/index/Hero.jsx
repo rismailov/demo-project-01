@@ -1,10 +1,22 @@
 import Button from './../global/Button';
 import { MdChatBubbleOutline, MdArrowForward } from 'react-icons/md';
-import HelloArrow from '../sprites/index/hero/HelloArrow';
 import Star from '../sprites/index/hero/Star';
 import Image from 'next/image';
-import Badge from './hero/Badge';
 import DesignDots from '../sprites/DesignDots';
+import Arrow from '../sprites/Arrow';
+
+function Badge({ emoji, text, style }) {
+    return (
+        <div
+            className="p-4 shadow-xl text-sm bg-white text-primary rounded-lg inline-flex items-center"
+            style={style || {}}
+        >
+            <div className="mr-2">{emoji}</div>
+
+            {text}
+        </div>
+    );
+}
 
 export default function Hero() {
     return (
@@ -13,7 +25,12 @@ export default function Hero() {
                 <div className="w-full h-full flex items-center justify-center lg:justify-between">
                     {/* left block */}
                     <div className="relative">
-                        <HelloArrow />
+                        <Arrow
+                            width="70"
+                            height="350"
+                            className="hidden sm:block"
+                            style={{ position: 'absolute', left: '-75px', top: '-10px' }}
+                        />
 
                         <h6 className="mb-3 text-xl font-bold text-primary">Hello,</h6>
 
@@ -40,7 +57,7 @@ export default function Hero() {
 
                             <button
                                 type="button"
-                                className="flex items-center justify-center xs:justify-start group"
+                                className="flex items-center justify-center xs:justify-start group dark:text-d-title"
                             >
                                 Check out Services
                                 <MdArrowForward className="w-5 h-5 mt-0.5 ml-2 text-primary transform group-hover:translate-x-2 transition-transform duration-150" />
@@ -57,6 +74,7 @@ export default function Hero() {
                                 style={{
                                     position: 'absolute',
                                     top: '100px',
+                                    left: '-50px',
                                 }}
                             />
                             <Badge
@@ -95,6 +113,7 @@ export default function Hero() {
                                 priority={true}
                                 src="/images/hero-person.png"
                                 layout="fixed"
+                                alt="Hero section Person"
                                 width={400}
                                 height={450}
                             />

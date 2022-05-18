@@ -149,4 +149,6 @@ const TikTok = () => {
     );
 };
 
-export default [Microsoft, Google, Tesla, TikTok];
+const ClientLogos = [Microsoft, Google, Tesla, TikTok];
+
+export default ClientLogos;

@@ -1,15 +1,4 @@
-:root {
-    --primary: #3b71fe;
-    --primary-hover: #5483fe;
-    --primary-active: #225ffe;
-    --light-text: rgba(14, 14, 44, 0.55);
-    --light-title: #0e0e2c;
-    --light-bg: #ffffff;
-    --dark-text: #a0a4ab;
-    --dark-title: #ffffff;
-    --dark-bg: #262a31;
-}
-
+@import './theme';
 @import './elements';
 
 html {
@@ -24,6 +13,7 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
         Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--app-bg);
 }
 
 a {

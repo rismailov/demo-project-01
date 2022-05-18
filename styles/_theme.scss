@@ -1,0 +1,16 @@
+:root {
+    --primary: #3b71fe;
+    --primary-hover: #5483fe;
+    --primary-active: #225ffe;
+    --app-text: rgba(14, 14, 44, 0.55);
+    --app-title: #0e0e2c;
+    --app-bg: #ffffff;
+    --app-border: #e5e7eb;
+}
+
+.dark {
+    --app-text: #a0a4ab;
+    --app-title: #f8f9fa;
+    --app-bg: #262a31;
+    --app-border: #4a4a4a;
+}

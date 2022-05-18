@@ -3,6 +3,8 @@ import Clients from '../components/index/Clients';
 import Hero from '../components/index/Hero';
 import Services from '../components/index/Services';
 import Team from '../components/index/Team';
+import Testimonials from '../components/index/Testimonials';
+import Work from '../components/index/Work';
 
 export default function Home() {
     return (
@@ -17,6 +19,8 @@ export default function Home() {
                 <Clients />
                 <Services />
                 <Team />
+                <Work />
+                <Testimonials />
             </div>
         </>
     );

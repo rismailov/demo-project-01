@@ -1,4 +1,5 @@
 import { defineConfig } from 'windicss/helpers';
+import colors from 'windicss/colors';
 
 export default defineConfig({
     extract: {
@@ -22,6 +23,9 @@ export default defineConfig({
             screens: { xs: '475px' },
             // l for Light, d for Dark themes
             colors: {
+                dark: colors.dark,
+                light: colors.light,
+                // custom
                 primary: '#3B71FE',
                 'primary-hover': '#5483fe',
                 'primary-active': '#225ffe',
@@ -38,7 +42,8 @@ export default defineConfig({
         btn: 'text-sm font-medium rounded-md shadow-md text-white transition-colors focus:ring-2',
         'btn-sm': 'py-2 px-5',
         'btn-md': 'py-3 px-6',
-        'btn-primary': 'bg-primary hover:bg-primary-hover ring-blue-400',
+        'btn-primary':
+            'bg-primary hover:bg-primary-hover active:bg-primary-active dark:bg-blue-500 dark:hover:bg-blue-400 dark:active:bg-blue-600 ring-blue-400',
     },
-    plugins: [],
+    plugins: [require('windicss/plugin/forms')],
 });

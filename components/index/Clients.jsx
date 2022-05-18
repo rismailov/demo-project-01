@@ -2,7 +2,7 @@ import ClientLogos from '../sprites/index/ClientLogos';
 
 export default function Clients() {
     return (
-        <section className="py-10 bg-gradient-to-b from-transparent to-gray-100">
+        <section className="py-10 bg-gradient-to-b from-transparent to-gray-100 dark:to-dark-200">
             <div className="container">
                 <div className="flex flex-col">
                     <h3>Clients We Helped</h3>

@@ -7,7 +7,7 @@ function HeaderLink({ text, href }) {
         ${
             router.pathname === href
                 ? 'text-l-title dark:text-d-title active'
-                : 'text-l-text hover:text-l-title dark:hover:text-d-title'
+                : 'text-l-text hover:text-l-title dark:text-d-text dark:hover:text-d-title'
         }
     `;
 
