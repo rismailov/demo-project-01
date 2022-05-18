@@ -73,15 +73,26 @@ export default function Team() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:justify-items-center lg:flex lg:space-x-10">
                     {/* Title & Description */}
                     <div className="flex flex-col items-center md:items-start md:max-w-sm">
-                        <h3 className="text-primary text-center md:text-left font-normal">
+                        <h3
+                            className="text-primary text-center md:text-left font-normal"
+                            data-aos="a-fade"
+                        >
                             The Team behind DigitUX
                         </h3>
 
-                        <h1 className="my-5 text-center md:text-left text-white">
+                        <h1
+                            className="my-5 text-center md:text-left text-white"
+                            data-aos="a-fade"
+                            data-aos-delay="100"
+                        >
                             A team of creative people excited to help you with your idea
                         </h1>
 
-                        <p className="text-center md:text-left text-gray-300">
+                        <p
+                            className="text-center md:text-left text-gray-300"
+                            data-aos="a-fade"
+                            data-aos-delay="200"
+                        >
                             Our team of digital product creators and Tch Bring Skilled
                             will take your idea to the next level and help you with your
                             product.
@@ -90,15 +101,21 @@ export default function Team() {
                         <button
                             type="button"
                             className="mt-7 btn btn-md px-10 btn-primary"
+                            data-aos="a-fade"
+                            data-aos-delay="300"
                         >
                             Join Us
                         </button>
                     </div>
 
-                    <div className="relative flex-1 flex items-center justify-center">
+                    <div
+                        className="relative flex-1 flex items-center justify-center"
+                        data-aos="a-fade"
+                        data-aos-delay="250"
+                    >
                         {/* Team Member Slider */}
                         <Carousel {...carouselProps}>
-                            {TEAM_MEMBERS.map((member) => (
+                            {TEAM_MEMBERS.map((member, i) => (
                                 <TeamMember
                                     key={member.id}
                                     name={member.name}

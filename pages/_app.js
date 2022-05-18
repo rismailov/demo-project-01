@@ -4,8 +4,15 @@ import '../styles/windi.css';
 import '../styles/app.scss';
 import Script from 'next/script';
 import Head from 'next/head';
+import aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
+    useEffect(() => {
+        aos.init({ once: true });
+    }, []);
+
     return (
         <>
             <Head>

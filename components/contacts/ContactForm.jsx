@@ -45,6 +45,8 @@ export default function ContactForm() {
         <form
             onSubmit={(e) => onFormSubmit(e)}
             className="mt-8 max-w-106 w-full p-5 lg:p-8 rounded-md bg-white dark:bg-[#31363f] shadow-2xl border border-light-800 dark:border-dark-50"
+            data-aos="a-fade"
+            data-aos-delay="250"
         >
             <div className="space-y-5">
                 <FormGroup

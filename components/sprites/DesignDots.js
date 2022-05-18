@@ -5,6 +5,8 @@ export default function DesignDots({ style, className }) {
             style={style}
             viewBox="0 0 494 512"
             fill="currentColor"
+            data-aos="fade"
+            data-aos-duration="2000"
             xmlns="http://www.w3.org/2000/svg"
         >
             <rect width="8" height="8" rx="4" />

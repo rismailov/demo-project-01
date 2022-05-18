@@ -31,14 +31,22 @@ export default function Hero() {
                             className="hidden sm:block"
                             style={{ position: 'absolute', left: '-75px', top: '-10px' }}
                         />
+                        <h6
+                            className="mb-3 text-xl font-bold text-primary"
+                            data-aos="a-fade"
+                        >
+                            Hello,
+                        </h6>
 
-                        <h6 className="mb-3 text-xl font-bold text-primary">Hello,</h6>
-
-                        <h1 className="max-w-lg">
+                        <h1 className="max-w-lg" data-aos="a-fade" data-aos-delay="100">
                             We Help People Bring Their Ideas To Life
                         </h1>
 
-                        <p className="mt-5 mb-12 text-lg">
+                        <p
+                            className="mt-5 mb-12 text-lg"
+                            data-aos="a-fade"
+                            data-aos-delay="200"
+                        >
                             A talented team to help you in your journey on creating
                             <br />
                             useful and easy to use product.
@@ -46,8 +54,11 @@ export default function Hero() {
                             <br />
                             Available 24/7
                         </p>
-
-                        <div className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center">
+                        <div
+                            className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center"
+                            data-aos="a-fade"
+                            data-aos-delay="300"
+                        >
                             <Button className="btn btn-primary btn-md">
                                 <div className="flex items-center justify-center xs:justify-start">
                                     Let&apos;s Talk
@@ -67,7 +78,12 @@ export default function Hero() {
 
                     {/* right block */}
                     <div className="hidden lg:block relative">
-                        <div className="w-full h-full relative z-20">
+                        <div
+                            className="w-full h-full relative z-20"
+                            data-aos="fade"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                        >
                             <Badge
                                 emoji="🔎"
                                 text="UI/UX Designer"
@@ -106,7 +122,12 @@ export default function Hero() {
                             />
                         </div>
 
-                        <div className="w-full h-full relative z-10 pr-20">
+                        <div
+                            className="w-full h-full relative z-10 pr-20"
+                            data-aos="fade"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                        >
                             <Star />
 
                             <Image

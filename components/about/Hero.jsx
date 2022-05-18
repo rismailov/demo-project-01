@@ -3,23 +3,38 @@ import { MdChatBubbleOutline, MdArrowForward } from 'react-icons/md';
 
 export default function Hero() {
     return (
-        <section className="h-full pt-20 bg-l-bg dark:bg-d-bg" style={{ minHeight: '50vh' }}>
+        <section
+            className="h-full pt-20 bg-l-bg dark:bg-d-bg"
+            style={{ minHeight: '50vh' }}
+        >
             <div
                 className="max-w-xl container h-full flex flex-col items-center justify-center"
                 style={{ minHeight: 'inherit' }}
             >
-                <h4 className="mb-5 text-center text-primary font-bold">About Us</h4>
+                <h4 className="mb-5 text-center text-primary font-bold" data-aos="a-fade">
+                    About Us
+                </h4>
 
-                <h1 className="mb-7 text-center">What we do</h1>
+                <h1 className="mb-7 text-center" data-aos="a-fade" data-aos-delay="100">
+                    What we do
+                </h1>
 
-                <p className="mb-10 text-center leading-relaxed">
+                <p
+                    className="mb-10 text-center leading-relaxed"
+                    data-aos="a-fade"
+                    data-aos-delay="200"
+                >
                     DigitUx is a Digital agency founded 2022, that create user centered
                     product that help her client to evolve ,our core idealogy is
                     perfection, our goal is to make usefull and easy to use products And
                     help people to grow their businesses.
                 </p>
 
-                <div className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center">
+                <div
+                    className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center"
+                    data-aos="a-fade"
+                    data-aos-delay="300"
+                >
                     <Button className="btn btn-primary btn-md">
                         <div className="flex items-center justify-center xs:justify-start">
                             Let&apos;s Talk

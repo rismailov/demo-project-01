@@ -11,17 +11,29 @@ export default function Hero() {
                 className="max-w-xl container h-full flex flex-col items-center justify-center"
                 style={{ minHeight: 'inherit' }}
             >
-                <h4 className="mb-5 text-center text-primary font-bold">Our Services</h4>
+                <h4 className="mb-5 text-center text-primary font-bold" data-aos="a-fade">
+                    Our Services
+                </h4>
 
-                <h1 className="mb-7 text-center">Services We Offer</h1>
+                <h1 className="mb-7 text-center" data-aos="a-fade" data-aos-delay="100">
+                    Services We Offer
+                </h1>
 
-                <p className="mb-10 text-center leading-relaxed">
+                <p
+                    className="mb-10 text-center leading-relaxed"
+                    data-aos="a-fade"
+                    data-aos-delay="200"
+                >
                     With our awesome team we offer a variety of services from UI/UX design
                     to video productions. Our goal is to help you on your road to create
                     your product.
                 </p>
 
-                <div className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center">
+                <div
+                    className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-7 item-center"
+                    data-aos="a-fade"
+                    data-aos-delay="300"
+                >
                     <Button className="btn btn-primary btn-md">
                         <div className="flex items-center justify-center xs:justify-start">
                             Let&apos;s Talk

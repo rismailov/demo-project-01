@@ -1,10 +1,15 @@
 import Image from 'next/image';
 
-function TeamMember({ name, position, src }) {
+function TeamMember({ name, position, src, ...aos }) {
     return (
-        <div>
+        <div {...aos}>
             <div className="relative w-50 h-60 rounded-md shadow-md overflow-hidden">
-                <Image src={src} layout="fill" objectFit="cover" alt={`Team member: ${name}`} />
+                <Image
+                    src={src}
+                    layout="fill"
+                    objectFit="cover"
+                    alt={`Team member: ${name}`}
+                />
             </div>
 
             <h4 className="mt-2 font-bold">{name}</h4>
@@ -33,21 +38,29 @@ export default function Team() {
                             name="Jamila Smail"
                             position="CO-Founder"
                             src="/images/about-page-team/01.png"
+                            data-aos="fade-in"
+                            data-aos-delay="300"
                         />
                         <TeamMember
                             name="Farouk Dari"
                             position="Full Stack Developer"
                             src="/images/about-page-team/02.png"
+                            data-aos="fade-in"
+                            data-aos-delay="400"
                         />
                         <TeamMember
                             name="Aksel Juba"
                             position="Graphic Designer"
                             src="/images/about-page-team/03.png"
+                            data-aos="fade-in"
+                            data-aos-delay="500"
                         />
                         <TeamMember
                             name="Dihia Numida"
                             position="UI/UX Designer"
                             src="/images/about-page-team/04.png"
+                            data-aos="fade-in"
+                            data-aos-delay="600"
                         />
                     </div>
                 </div>

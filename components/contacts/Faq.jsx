@@ -21,7 +21,12 @@ export default function Faq() {
                     <div className="max-w-md mx-auto">
                         <h5 className="text-primary font-bold text-center">F. A. Q.</h5>
 
-                        <h2 className="my-3 text-center">
+                        <h2
+                            className="my-3 text-center"
+                            data-aos="fade"
+                            data-aos-duration="750"
+                            data-aos-delay="0"
+                        >
                             Here are some answers for the most frequently asked questions
                         </h2>
 
@@ -31,6 +36,9 @@ export default function Faq() {
                                     key={idx}
                                     {...item}
                                     setActive={() => setActive(idx)}
+                                    data-aos="fade"
+                                    data-aos-duration="750"
+                                    data-aos-delay={idx * 100}
                                 />
                             ))}
                         </div>
@@ -41,9 +49,9 @@ export default function Faq() {
     );
 }
 
-function FaqItem({ q, a, isActive, setActive }) {
+function FaqItem({ q, a, isActive, setActive, ...aos }) {
     return (
-        <div className={`faq-item ${isActive ? 'active' : ''}`}>
+        <div className={`faq-item ${isActive ? 'active' : ''}`} {...aos}>
             <div className="faq-item__question" onClick={setActive} role="button">
                 {q}
 

@@ -10,9 +10,13 @@ export default function Hero() {
                 className="relative z-10 max-w-xl container h-full flex flex-col items-center"
                 style={{ minHeight: 'inherit' }}
             >
-                <h3 className="mb-5 text-primary text-center">Let&apos;s have a chat</h3>
+                <h3 className="mb-5 text-primary text-center" data-aos="a-fade">
+                    Let&apos;s have a chat
+                </h3>
 
-                <h1 className="text-center">An Expert At Your Services</h1>
+                <h1 className="text-center" data-aos="a-fade" data-aos-delay="150">
+                    An Expert At Your Services
+                </h1>
 
                 <ContactForm />
             </div>

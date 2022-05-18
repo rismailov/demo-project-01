@@ -33,9 +33,9 @@ const carouselProps = {
     className: 'py-14 px-8 rounded-md bg-white dark:bg-d-bg shadow-md max-w-2xl mx-auto',
 };
 
-function Testimonial({ text, name, position, imageSrc }) {
+function Testimonial({ text, name, position, imageSrc, ...aos }) {
     return (
-        <div className="flex flex-col items-center justify-center space-y-7 ">
+        <div className="flex flex-col items-center justify-center space-y-7" {...aos}>
             <p className="max-w-lg text-center">{text}</p>
 
             <div className="flex items-center space-x-5">
@@ -57,17 +57,33 @@ export default function Testimonials() {
         <section className="py-20 bg-gray-200/60 dark:bg-gray-300/5">
             <div className="container">
                 <div>
-                    <h3 className="font-normal text-center text-primary">Testmonials</h3>
+                    <h3
+                        className="font-normal text-center text-primary"
+                        data-aos="fade"
+                        data-aos-duration="750"
+                    >
+                        Testimonials
+                    </h3>
 
-                    <h2 className="text-center mt-3 mb-12">
+                    <h2
+                        className="text-center mt-3 mb-12"
+                        data-aos="fade"
+                        data-aos-duration="750"
+                        data-aos-delay="150"
+                    >
                         Still hesitating working with us?
                         <br />
                         See what people say
                     </h2>
 
                     <Carousel {...carouselProps}>
-                        {TESTIMONIALS.map((testimonial) => (
-                            <Testimonial key={testimonial.id} {...testimonial} />
+                        {TESTIMONIALS.map((testimonial, i) => (
+                            <Testimonial
+                                key={testimonial.id}
+                                {...testimonial}
+                                data-aos="fade-in"
+                                data-aos-delay={i * 100}
+                            />
                         ))}
                     </Carousel>
                 </div>
