@@ -30,15 +30,16 @@ export default function Faq() {
                             Here are some answers for the most frequently asked questions
                         </h2>
 
-                        <div className="mx-auto mt-10 w-full space-y-2">
+                        <div
+                            className="mx-auto mt-10 w-full space-y-2"
+                            data-aos="fade"
+                            data-aos-duration="750"
+                        >
                             {faqItems.map((item, idx) => (
                                 <FaqItem
                                     key={idx}
                                     {...item}
                                     setActive={() => setActive(idx)}
-                                    data-aos="fade"
-                                    data-aos-duration="750"
-                                    data-aos-delay={idx * 100}
                                 />
                             ))}
                         </div>
@@ -49,9 +50,9 @@ export default function Faq() {
     );
 }
 
-function FaqItem({ q, a, isActive, setActive, ...aos }) {
+function FaqItem({ q, a, isActive, setActive }) {
     return (
-        <div className={`faq-item ${isActive ? 'active' : ''}`} {...aos}>
+        <div className={`faq-item ${isActive ? 'active' : ''}`}>
             <div className="faq-item__question" onClick={setActive} role="button">
                 {q}
 

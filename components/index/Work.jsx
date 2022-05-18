@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import { MdChevronRight } from 'react-icons/md';
+import notifyAboutDemo from '../global/notify-about-demo';
 
 function WorkExample({ title, desc, imageSrc, rootElClass, ...aos }) {
     return (
-        <button type="button" className={rootElClass} {...aos}>
+        <button type="button" onClick={notifyAboutDemo} className={rootElClass} {...aos}>
             {/* {imageSrc && ( */}
             <div className="relative w-full h-full rounded-md overflow-hidden shadow-lg mb-3">
                 <Image
@@ -84,6 +85,7 @@ export default function Work() {
                     <div className="flex items-center justify-center mt-7 pt-7">
                         <button
                             type="button"
+                            onClick={notifyAboutDemo}
                             className="py-2 px-5 rounded-md text-primary flex items-center border-2 border-primary group transition-colors hover:text-l-text dark:hover:text-d-text hover:border-l-text dark:hover:border-d-text text-sm font-medium"
                             data-aos="a-fade"
                             data-aos-duration="750"

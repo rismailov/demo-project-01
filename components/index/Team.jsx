@@ -4,6 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { RiArrowLeftCircleLine, RiArrowRightCircleLine } from 'react-icons/ri';
 import DesignDots from './../sprites/DesignDots';
+import notifyAboutDemo from '../global/notify-about-demo';
 
 const TEAM_MEMBERS = [
     {
@@ -100,6 +101,7 @@ export default function Team() {
 
                         <button
                             type="button"
+                            onClick={notifyAboutDemo}
                             className="mt-7 btn btn-md px-10 btn-primary"
                             data-aos="a-fade"
                             data-aos-delay="300"

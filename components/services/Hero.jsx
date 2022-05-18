@@ -1,5 +1,6 @@
 import Button from './../global/Button';
 import { MdChatBubbleOutline, MdArrowForward } from 'react-icons/md';
+import notifyAboutDemo from '../global/notify-about-demo';
 
 export default function Hero() {
     return (
@@ -34,7 +35,7 @@ export default function Hero() {
                     data-aos="a-fade"
                     data-aos-delay="300"
                 >
-                    <Button className="btn btn-primary btn-md">
+                    <Button onClick={notifyAboutDemo} className="btn btn-primary btn-md">
                         <div className="flex items-center justify-center xs:justify-start">
                             Let&apos;s Talk
                             <MdChatBubbleOutline className="ml-3 w-5 h-5" />
@@ -43,6 +44,7 @@ export default function Hero() {
 
                     <button
                         type="button"
+                        onClick={notifyAboutDemo}
                         className="flex items-center justify-center xs:justify-start group dark:text-d-title"
                     >
                         Check out Projects

@@ -5,6 +5,7 @@ import { RiMenu3Line } from 'react-icons/ri';
 import { VscClose } from 'react-icons/vsc';
 import { useState, useEffect, useRef } from 'react';
 import { useWindowSize, useClickAway } from 'react-use';
+import notifyAboutDemo from '../global/notify-about-demo';
 import ThemeToggler from './ThemeToggler';
 import Link from 'next/link';
 
@@ -56,7 +57,10 @@ export default function Header() {
                 <div className="flex items-center space-x-5">
                     <ThemeToggler />
 
-                    <Button className="hidden sm:block btn btn-primary btn-sm md:btn-md">
+                    <Button
+                        onClick={notifyAboutDemo}
+                        className="hidden sm:block btn btn-primary btn-sm md:btn-md"
+                    >
                         Get A Quote
                     </Button>
 

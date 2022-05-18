@@ -1,5 +1,6 @@
 import { MdChevronRight } from 'react-icons/md';
 import Button from '../global/Button';
+import notifyAboutDemo from '../global/notify-about-demo';
 
 function Service({ title, desc }) {
     return (
@@ -8,6 +9,7 @@ function Service({ title, desc }) {
             <p className="mt-3 mb-5">{desc}</p>
             <button
                 type="button"
+                onClick={notifyAboutDemo}
                 className="flex items-center py-2 px-3 rounded-md border-2 border-primary text-primary text-xs font-medium hover:bg-primary hover:text-white transition-colors duration-100"
             >
                 Learn More

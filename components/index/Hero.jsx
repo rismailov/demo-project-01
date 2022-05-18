@@ -4,6 +4,8 @@ import Star from '../sprites/index/hero/Star';
 import Image from 'next/image';
 import DesignDots from '../sprites/DesignDots';
 import Arrow from '../sprites/Arrow';
+import notifyAboutDemo from '../global/notify-about-demo';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Badge({ emoji, text, style }) {
     return (
@@ -59,7 +61,10 @@ export default function Hero() {
                             data-aos="a-fade"
                             data-aos-delay="300"
                         >
-                            <Button className="btn btn-primary btn-md">
+                            <Button
+                                onClick={notifyAboutDemo}
+                                className="btn btn-primary btn-md"
+                            >
                                 <div className="flex items-center justify-center xs:justify-start">
                                     Let&apos;s Talk
                                     <MdChatBubbleOutline className="ml-3 w-5 h-5" />
@@ -67,6 +72,7 @@ export default function Hero() {
                             </Button>
 
                             <button
+                                onClick={notifyAboutDemo}
                                 type="button"
                                 className="flex items-center justify-center xs:justify-start group dark:text-d-title"
                             >

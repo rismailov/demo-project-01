@@ -2,13 +2,17 @@ import Layout from '../components/Layout';
 import 'windi.css';
 import '../styles/windi.css';
 import '../styles/app.scss';
-import Script from 'next/script';
 import Head from 'next/head';
+import Script from 'next/script';
+import { useEffect } from 'react';
 import aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import useTheme from '../hooks/useTheme';
 
 function MyApp({ Component, pageProps }) {
+    const [theme] = useTheme();
+
     useEffect(() => {
         aos.init({ once: true });
     }, []);
@@ -26,6 +30,8 @@ function MyApp({ Component, pageProps }) {
             <Script src="/theme.js" strategy="beforeInteractive" />
 
             <Layout>
+                <ToastContainer limit={5} newestOnTop theme={theme} />
+
                 <Component {...pageProps} />
             </Layout>
         </>
