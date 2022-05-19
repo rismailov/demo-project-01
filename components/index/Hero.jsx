@@ -5,7 +5,6 @@ import Image from 'next/image';
 import DesignDots from '../sprites/DesignDots';
 import Arrow from '../sprites/Arrow';
 import notifyAboutDemo from '../global/notify-about-demo';
-import 'react-toastify/dist/ReactToastify.css';
 
 function Badge({ emoji, text, style }) {
     return (

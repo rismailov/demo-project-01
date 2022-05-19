@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useTheme from '../hooks/useTheme';
 
 function MyApp({ Component, pageProps }) {
@@ -30,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             <Script src="/theme.js" strategy="beforeInteractive" />
 
             <Layout>
-                <ToastContainer limit={5} newestOnTop theme={theme} />
+                <ToastContainer newestOnTop theme={theme} />
 
                 <Component {...pageProps} />
             </Layout>
